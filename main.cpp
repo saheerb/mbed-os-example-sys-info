@@ -9,7 +9,7 @@ int main()
     mbed_stats_sys_t stats;
     mbed_stats_sys_get(&stats);
 
-    printf("Mbed OS Version: 0x%x \n", stats.os_version);
+    printf("Mbed OS Version: %ld \n", stats.os_version);
 
     /* CPUID Register information
     [31:24]Implementer      0x41 = ARM
