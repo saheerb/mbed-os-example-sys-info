@@ -15,7 +15,7 @@ int main()
     [31:24]Implementer      0x41 = ARM
     [23:20]Variant          Major revision 0x0  =  Revision 0
     [19:16]Architecture     0xC  = Baseline Architecture
-                            0xF  = Constant (Mainline Architecture?)
+                            0xF  = Constant (Mainline Architecture)
     [15:4]PartNO            0xC20 =  Cortex-M0
                             0xC60 = Cortex-M0+
                             0xC23 = Cortex-M3
@@ -23,7 +23,7 @@ int main()
                             0xC27 = Cortex-M7
                             0xD20 = Cortex-M23
                             0xD21 = Cortex-M33
-    [3:0]Revision           Minor revision: 0x1 = Patch 1.
+    [3:0]Revision           Minor revision: 0x1 = Patch 1
     */
     printf("CPU ID: 0x%x \n", stats.cpu_id);
 
