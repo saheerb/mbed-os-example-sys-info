@@ -27,6 +27,11 @@ int main()
     */
     printf("CPU ID: 0x%x \n", stats.cpu_id);
 
+    /* Compiler IDs
+        ARM     = 1
+        GCC_ARM = 2
+        IAR     = 3
+    */
     printf("Compiler ID: %d \n", stats.compiler_id);
 
     /* Compiler versions:
