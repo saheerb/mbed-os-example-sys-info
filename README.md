@@ -30,6 +30,28 @@ Depending on the target, the example project can be built with GCC_ARM, ARM or I
 ```bash
 $ mbed compile -S
 ```
+## Expected output
+The LED blinks and the serial terminal shows an output similar to the following:
+```
+--- Terminal on /dev/ttyACM0 - 9600,8,N,1 ---
+Mbed OS Version: 999999 
+CPU ID: 0x410fc241 
+Compiler ID: 1 
+Compiler Version: 6130008 
+RAM0: Start 0x20000000 Size: 0x30000 
+RAM1: Start 0x1fff0000 Size: 0x10000 
+ROM0: Start 0x0 Size: 0x100000
+```
+
+## Troubleshooting
+If you have problems, you can review the [documentation](https://os.mbed.com/docs/latest/tutorials/debugging.html) for suggestions on what could be wrong and how to fix it.
+
+## Related Links
+
+* [Mbed OS Stats API](https://os.mbed.com/docs/latest/apis/mbed-statistics.html).
+* [Mbed OS Configuration](https://os.mbed.com/docs/latest/reference/configuration.html).
+* [Mbed OS Serial Communication](https://os.mbed.com/docs/latest/tutorials/serial-communication.html).
+* [Mbed boards](https://os.mbed.com/platforms/).
 
 ### License and contributions
 The software is provided under Apache-2.0 license. Contributions to this project are accepted under the same license. Please see contributing.md for more info.
