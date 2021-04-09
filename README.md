@@ -21,7 +21,7 @@ The `main()` function outputs on the serial interface information about the hard
    ```bash
    $ mbed compile -m <TARGET> -t <TOOLCHAIN> --flash --sterm
    ```
-   
+
 Note: You can use the Mbed CLI command-line option "--sterm" to open a serial terminal after flashing.
 
 Your PC may take a few minutes to compile your code.
@@ -36,20 +36,20 @@ Depending on the target, you can build the example project with the `GCC_ARM`, `
 $ mbed compile -S
 ```
 
-## Expected output 
+## Expected output
 
-The serial terminal shows an output similar to: 
+The serial terminal shows an output similar to:
 
-``` 
+```
 --- Terminal on /dev/ttyACM0 - 9600,8,N,1 ---
-Mbed OS Version: 51500 
-CPU ID: 0x410fc241 
-Compiler ID: 1 
-Compiler Version: 6130008 
-RAM0: Start 0x20000000 Size: 0x30000 
-RAM1: Start 0x1fff0000 Size: 0x10000 
-ROM0: Start 0x0 Size: 0x100000 
-``` 
+Mbed OS Version: 51500
+CPU ID: 0x410fc241
+Compiler ID: 1
+Compiler Version: 6130008
+RAM0: Start 0x20000000 Size: 0x30000
+RAM1: Start 0x1fff0000 Size: 0x10000
+ROM0: Start 0x0 Size: 0x100000
+```
 
 You can use the CPU ID register, compiler ID and compiler version information below to interpret the above terminal logs.
 
@@ -97,22 +97,22 @@ You can enable the system statistics feature by setting `platform.sys-stats-enab
 ```
 {
     "target_overrides": {
-        "*": {            
-            "platform.sys-stats-enabled": true            
+        "*": {
+            "platform.sys-stats-enabled": true
         }
     }
 }
 ```
 
-## Troubleshooting 
+## Troubleshooting
 
-If you have problems, you can review the [documentation](https://os.mbed.com/docs/latest/tutorials/debugging.html) for suggestions on what could be wrong and how to fix it. 
+If you have problems, you can review the [documentation](https://os.mbed.com/docs/latest/tutorials/debugging.html) for suggestions on what could be wrong and how to fix it.
 
-## Related links 
+## Related links
 
-* [Mbed OS Stats API](https://os.mbed.com/docs/latest/apis/mbed-statistics.html). 
-* [Mbed OS configuration](https://os.mbed.com/docs/latest/reference/configuration.html). 
-* [Mbed OS serial communication](https://os.mbed.com/docs/latest/tutorials/serial-communication.html). 
+* [Mbed OS Stats API](https://os.mbed.com/docs/latest/apis/mbed-statistics.html).
+* [Mbed OS configuration](https://os.mbed.com/docs/latest/reference/configuration.html).
+* [Mbed OS serial communication](https://os.mbed.com/docs/latest/tutorials/serial-communication.html).
 * [Mbed boards](https://os.mbed.com/platforms/).
 
 ### License and contributions
