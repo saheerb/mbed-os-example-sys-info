@@ -3,9 +3,18 @@
 
 This example shows how to get system information onto an Mbed OS enabled platform.
 
-You can build this project with all supported [Mbed OS build tools](https://os.mbed.com/docs/mbed-os/latest/tools/index.html). However, this example project specifically refers to the command-line interface tool [Arm Mbed CLI](https://github.com/ARMmbed/mbed-cli#installing-mbed-cli).
+You can build the project with all supported [Mbed OS build tools](https://os.mbed.com/docs/mbed-os/latest/tools/index.html). However, this example project specifically refers to the command-line interface tools, [Arm Mbed CLI 1](https://github.com/ARMmbed/mbed-cli#installing-mbed-cli) and [Mbed CLI 2](https://github.com/ARMmbed/mbed-tools#installation).
 
-1. Install Mbed CLI.
+## Mbed OS build tools
+
+### Mbed CLI 2
+Starting with version 6.5, Mbed OS uses Mbed CLI 2. It uses Ninja as a build system, and CMake to generate the build environment and manage the build process in a compiler-independent manner. If you are working with Mbed OS version prior to 6.5 then check the section [Mbed CLI 1](#mbed-cli-1).
+1. [Install Mbed CLI 2](https://os.mbed.com/docs/mbed-os/latest/build-tools/install-or-upgrade.html).
+1. From the command-line, import the example: `mbed-tools import mbed-os-example-sys-info`
+1. Change the current directory to where the project was imported.
+
+### Mbed CLI 1
+1. [Install Mbed CLI 1](https://os.mbed.com/docs/mbed-os/latest/quick-start/offline-with-mbed-cli.html).
 1. From the command-line, import the example: `mbed import mbed-os-example-sys-info`
 1. Change the current directory to where the project was imported.
 
@@ -18,23 +27,44 @@ The `main()` function outputs on the serial interface information about the hard
 1. Connect a USB cable between the USB port on the target and the host computer.
 1. Run the following command to build the example project and program the microcontroller flash memory:
 
-   ```bash
-   $ mbed compile -m <TARGET> -t <TOOLCHAIN> --flash --sterm
-   ```
+    * Mbed CLI 2
 
-Note: You can use the Mbed CLI command-line option "--sterm" to open a serial terminal after flashing.
+    ```bash
+    $ mbed-tools compile -m <TARGET> -t <TOOLCHAIN> --flash --sterm
+    ```
+
+    * Mbed CLI 1
+
+    ```bash
+    $ mbed compile -m <TARGET> -t <TOOLCHAIN> --flash --sterm
+    ```
 
 Your PC may take a few minutes to compile your code.
 
-The binary is located at `./BUILD/<TARGET>/<TOOLCHAIN>/mbed-os-example-sys-info.bin`.
+The binary is located at:
 
-Alternatively, you can manually copy the binary to the target, which gets mounted on the host computer through USB.
+* **Mbed CLI 2** -
+  `./cmake_build/<TARGET>/develop/<TOOLCHAIN>/mbed-os-example-sys-info.bin`
+
+* **Mbed CLI 1** - `./BUILD/<TARGET>/<TOOLCHAIN>/mbed-os-example-sys-info.bin`.
+
+You can manually copy the binary to the target, which gets mounted on the host
+computer through USB, rather than using the `--flash` option.
+
+You can also open a serial terminal separately, rather than using the `--sterm`
+option, with the following command:
+
+* Mbed CLI 2
+    ```bash
+    $ mbed-tools sterm
+    ```
+
+* Mbed CLI 1
+    ```bash
+    $ mbed sterm
+    ```
 
 Depending on the target, you can build the example project with the `GCC_ARM` or `ARM` toolchain. After installing Arm Mbed CLI, run the command below to determine which toolchain supports your target:
-
-```bash
-$ mbed compile -S
-```
 
 ## Expected output
 
